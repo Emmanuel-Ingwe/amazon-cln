@@ -25,11 +25,17 @@ const index = (props: Props) => {
 
             <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex">
                 <SlLocationPin />
-                <div className="">
+                <div className="text-xs">
                     <p className="">Deliver to</p>
-                    <p className="">USA</p>
+                    <p className="text-white font-bold uppercase">USA</p>
                 </div>
             </div>
+
+            <div className="">
+                <input type="text" placeholder='search next amazonn product' />
+            </div>
+
+
         </div>
     </div>
   )
