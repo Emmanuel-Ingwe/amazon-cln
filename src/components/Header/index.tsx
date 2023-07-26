@@ -23,12 +23,12 @@ const index = (props: Props) => {
                 <Image className='w-28 object-cover' src={logo} alt='logoimg' />
             </div>
 
-            <div className="">
+            <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex">
                 <SlLocationPin />
                 <div className="">
                     <p className="">Deliver to</p>
                     <p className="">USA</p>
-                S</div>
+                </div>
             </div>
         </div>
     </div>
