@@ -54,7 +54,8 @@ const index = (props: Props) => {
                 <p className="">Marked</p>
                 <p className="text-white font-bold">& Favourite</p>
             </div>
-            <div className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] relative">
+            
+            <Link href={'/cart'} className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] relative">
                 <Image
                     className="w-auto object-cover h-8"
                     src={cartIcon}
@@ -62,7 +63,7 @@ const index = (props: Props) => {
                  />
                  <p className="text-xs text-white font-bold mt-3">Cart</p>
                  <span className="absolute text-amazon_yellow text-xs top-2 left-[29px] font-semibold">0</span>
-            </div>
+            </Link>
 
         </div>
     </div>
