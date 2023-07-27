@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import BottomHeader from '../Header/BottomHeader'
 import Header from '../../components/Header/index'
 import Footer from "@/components/Footer"
 
 
 
-type Props = {}
+interface Props {
+    children: ReactElement
+}
 
-const index = (props: Props) => {
+const index = ({ children }: Props) => {
   return (
     <>
         <Header />
         <BottomHeader />
+        {children}
         <Footer />
     </>
   )
