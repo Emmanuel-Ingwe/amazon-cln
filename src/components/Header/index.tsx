@@ -5,6 +5,7 @@ import { BiCaretDown } from "react-icons/bi";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SlLocationPin } from "react-icons/sl";
 import Link from "next/link";
+import cartIcon from '../../images/cartIcon.png'
 // import { useSelector, useDispatch } from "react-redux";
 // import { StateProps, StoreProduct } from "../../../type";
 // import { useSession, signIn, signOut } from "next-auth/react";
@@ -41,15 +42,28 @@ const index = (props: Props) => {
                 </span>
             </div>
 
-            <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex gap-1">
-                <p className="">Hello, sign in</p>
+            <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+                <p className="text-white font-bold flex items-center">Hello, sign in</p>
                 <p className="">
                     Account & Lists{" "}
                     <span><BiCaretDown /></span>
                 </p>
             </div>
 
- 
+            <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+                <p className="">Marked</p>
+                <p className="text-white font-bold">& Favourite</p>
+            </div>
+            <div className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] relative">
+                <Image
+                    className="w-auto object-cover h-8"
+                    src={cartIcon}
+                    alt="cartImg" 
+                 />
+                 <p className="text-xs text-white font-bold mt-3">Cart</p>
+                 <span className="absolute text-amazon_yellow text-xs top-2 left-[29px] font-semibold">0</span>
+            </div>
+
         </div>
     </div>
   )
