@@ -23,7 +23,7 @@ const index = (props: Props) => {
                 <Image className='w-28 object-cover' src={logo} alt='logoimg' />
             </div>
 
-            <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex">
+            <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex gap-1">
                 <SlLocationPin />
                 <div className="text-xs">
                     <p className="">Deliver to</p>
@@ -31,11 +31,25 @@ const index = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex-1 h-10 hidden md:inline-flex items-center">
-                <input type="text" placeholder='search next amazonn product' />
+            <div className="flex-1 h-10 hidden md:inline-flex items-center justify-between relative">
+                <input onChange={''}
+                    value={''}
+                    className="w-full h-full rounded-md px-2 placeholder:text-sm text-base text-black border-[3px] border-transparent outline-none focus-visible:border-amazon_yellow" />
+
+                <span className="w-12 h-full bg-amazon_yellow text-black text-2xl flex items-center justify-center absolute right-0 rounded-tr-md rounded-br-md">
+                    <HiOutlineSearch />
+                </span>
             </div>
 
+            <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 items-center justify-center h-[70%] hidden xl:inline-flex gap-1">
+                <p className="">Hello, sign in</p>
+                <p className="">
+                    Account & Lists{" "}
+                    <span><BiCaretDown /></span>
+                </p>
+            </div>
 
+ 
         </div>
     </div>
   )
