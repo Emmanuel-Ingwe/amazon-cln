@@ -13,6 +13,7 @@ export default function Home() {
     >
       <Header />
       <BottomHeader />
+      <div className="py-10 bg-gray-300"></div>
     </main>
   )
 }
