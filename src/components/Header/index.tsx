@@ -31,7 +31,7 @@ const index = (props: Props) => {
                 </div>
             </div>
 
-            <div className="">
+            <div className="flex-1 h-10 hidden md:inline-flex items-center">
                 <input type="text" placeholder='search next amazonn product' />
             </div>
 
