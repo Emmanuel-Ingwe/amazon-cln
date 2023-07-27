@@ -16,7 +16,7 @@ export default function Home({ productData }: Props) {
     <main>
       <div className="max-w-screen-2xl mx-auto">
         <Banner />
-        <Products />
+        <Products productData={productData} />
       </div>
     </main>
   )
