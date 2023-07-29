@@ -22,10 +22,12 @@ const index = ({ productData }: any) => {
                     <FaHeart />
                   </span>
                 </div>
+                {isNew && <p  className='absolute top-0 right-0 text-amazon_blue font-medium text-xs tracking-wide animate-bounce'>!save {oldPrice - price}</p>}
               </div>
+              <hr />
             </div>
         ))}
-    </div>
+    </div> 
   )
 }
 
