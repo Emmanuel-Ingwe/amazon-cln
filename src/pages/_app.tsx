@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="font-bodyfont">
+    <div className="font-bodyfont bg-gray-300">
       <RootLayout>
          <Component {...pageProps} />
       </RootLayout>
