@@ -10,7 +10,11 @@ const index = ({ productData }: any) => {
     console.log(productData)
   return (
     <div className='w-full px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
-        {productData.map(({_id,title,brand,category,description,image,isNew,oldPrice,price }: ProductProps) => (
+          {productData.map((item) => (
+            
+          ))}
+          
+        {/* {productData.map(({_id,title,brand,category,description,image,isNew,oldPrice,price }: ProductProps) => (
             <div key={_id} className='w-full bg-white text-black p-4 border border-gray-300 rounded-lg group'> 
               <div className="w-full h-[260px] relative">
                 <Image className='w-full h-full object-cover scale-90 hover:scale-100 transition-transform duration-300' width={300} height={300} src={image} alt='productImage'/>
@@ -22,11 +26,11 @@ const index = ({ productData }: any) => {
                     <FaHeart />
                   </span>
                 </div>
-                {isNew && <p  className='absolute top-0 right-0 text-amazon_blue font-medium text-xs tracking-wide animate-bounce'>!save {oldPrice - price}</p>}
-              </div>
+                {/* {isNew && <p  className='absolute top-0 right-0 text-amazon_blue font-medium text-xs tracking-wide animate-bounce'>!save {oldPrice - price}</p>} */}
+              {/* </div>
               <hr />
             </div>
-        ))}
+        ))} */} 
     </div> 
   )
 }
