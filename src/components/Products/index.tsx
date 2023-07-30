@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
 
+type Props = {}
 
 const index = ({ productData }: any) => {
     console.log(productData)
