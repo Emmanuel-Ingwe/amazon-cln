@@ -4,12 +4,16 @@ import Image from 'next/image'
 import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
 import  FormattedPrice  from '../../components/FormattedPrice'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/store/nextSlice';
 
 
 type Props = {}
 
 const index = ({ productData }: any) => {
     console.log(productData)
+    const dispatch = useDispatch()
+
   return (
     <div className='w-full px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
         {productData.map(({_id,title,brand,category,description,image,isNew,oldPrice,price }: ProductProps) => (
@@ -39,7 +43,20 @@ const index = ({ productData }: any) => {
                   </span>
                 </p>
                 <p className="text-xs text-gray-600 text-justify">{description.substring(0, 120)}</p>
-                <button className="h-10 font-medium bg-amazon_blue text-white rounded-md hover:bg-amazon_yellow hover:text-black duration-300 mt-2">add to cart</button>
+                <button onClick={()=> dispatch(addToCart({
+                  _id: _id,
+                  title: title,
+                  brand: brand,
+                  category: category,
+                  description: description,
+                  image: image,
+                  isNew: isNew,
+                  oldPrice: oldPrice,
+                  price: price,
+                  quantity: 1,
+                }))}
+
+                 className="h-10 font-medium bg-amazon_blue text-white rounded-md hover:bg-amazon_yellow hover:text-black duration-300 mt-2">add to cart</button>
               </div>
             </div>
         ))}
