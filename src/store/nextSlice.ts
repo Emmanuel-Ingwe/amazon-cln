@@ -53,8 +53,49 @@ export const nextSlice = createSlice({
               existingProduct!.quantity--;
             }
           },
+          deleteProduct: (state, action) => {
+            state.productData = state.productData.filter(
+              (item) => item._id !== action.payload
+            );
+          },
+          deleteFavorite: (state, action) => {
+            state.favoriteData = state.favoriteData.filter(
+              (item) => item._id !== action.payload
+            );
+          },
+      
+          resetCart: (state) => {
+            state.productData = [];
+          },
+          resetFavoriteData: (state) => {
+            state.favoriteData = [];
+          },
+      
+          addUser: (state, action) => {
+            state.userInfo = action.payload;
+          },
+          removeUser: (state) => {
+            state.userInfo = null;
+          },
+          setAllProducts: (state, action) => {
+            state.allProducts = action.payload;
+          },
     },
 });
 
-export const { addToCart } = nextSlice.actions;
-export default nextSlice.reducer
+
+export const {
+    addToCart,
+    addToFavorite,
+    increaseQuantity,
+    decreaseQuantity,
+    deleteProduct,
+    resetCart,
+    addUser,
+    removeUser,
+    setAllProducts,
+    deleteFavorite,
+    resetFavoriteData,
+  } = nextSlice.actions;
+  
+  export default nextSlice.reducer;
