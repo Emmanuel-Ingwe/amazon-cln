@@ -6,7 +6,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlLocationPin } from "react-icons/sl";
 import Link from "next/link";
 import cartIcon from '../../images/cartIcon.png'
-// import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // import { StateProps, StoreProduct } from "../../../type";
 // import { useSession, signIn, signOut } from "next-auth/react";
 // import { useEffect, useState } from "react";
@@ -16,6 +16,8 @@ import cartIcon from '../../images/cartIcon.png'
 type Props = {}
 
 const index = (props: Props) => {
+    const {productData, favouriteData} = useSelector((state) =>state.next)
+
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
         <div className="h-full w-full mx-auto inline-flex items-center justify-between gap-1 mdl:gap-3 px-4">
