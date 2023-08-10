@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 type Props = {}
 
 const index = (props: Props) => {
-    const {productData, favouriteData} = useSelector((state) =>state.next)
+    const {productData, favouriteData} = useSelector((state) => state.next)
 
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
