@@ -7,14 +7,14 @@ import { SlLocationPin } from "react-icons/sl";
 import Link from "next/link";
 import cartIcon from '../../images/cartIcon.png'
 import { useSelector, useDispatch } from "react-redux";
-// import { StateProps, StoreProduct } from "../../../type";
+import { StateProps, StoreProduct } from "../../../type";
 // import { useSession, signIn, signOut } from "next-auth/react";
 // import { useEffect, useState } from "react";
 // import { addUser } from "@/store/nextSlice";
 // import SearchProducts from "../SearchProducts";
 
 type Props = {}
-
+ 
 const index = (props: Props) => {
     const {productData, favouriteData} = useSelector((state) => state.next)
 
