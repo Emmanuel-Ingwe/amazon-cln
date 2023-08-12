@@ -55,6 +55,7 @@ const index = (props: Props) => {
             <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
                 <p className="">Marked</p>
                 <p className="text-white font-bold">& Favourite</p>
+                {favouriteData.Data > 0 && <span>{favouriteData.length}</span>}
             </div>
             
             <Link href={'/cart'} className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] relative">
