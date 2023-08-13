@@ -5,7 +5,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
 import  FormattedPrice  from '../../components/FormattedPrice'
 import { useDispatch } from 'react-redux';
-import { addToCart } from '@/store/nextSlice';
+import { addToCart, addToFavorite } from '@/store/nextSlice';
 
 
 type Props = {}
@@ -49,7 +49,18 @@ const index = ({ productData }: any) => {
                   <span className="text-sm line-through">
                     <FormattedPrice amount={oldPrice} />
                   </span>
-                  <span className="text-amazon_blue font-semibold">
+                  <span onClick={() => dispatch(addToFavorite({
+                     _id: _id,
+                     title: title,
+                     brand: brand,
+                     category: category,
+                     description: description,
+                     image: image,
+                     isNew: isNew,
+                     oldPrice: oldPrice,
+                     price: price,
+                     quantity: 1,
+                  }))} className="text-amazon_blue font-semibold">
                     <FormattedPrice amount={price} />
                   </span>
                 </p>

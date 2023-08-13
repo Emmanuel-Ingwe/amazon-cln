@@ -16,7 +16,7 @@ import { StateProps, StoreProduct } from "../../../type";
 type Props = {}
  
 const index = (props: Props) => {
-    const {productData, favouriteData} = useSelector((state) => state.next)
+    const {productData, favouriteData} = useSelector((state: StateProps) => state.next)
 
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
@@ -64,7 +64,9 @@ const index = (props: Props) => {
                     alt="cartImg" 
                  />
                  <p className="text-xs text-white font-bold mt-3">Cart</p>
-                 <span className="absolute text-amazon_yellow text-xs top-2 left-[29px] font-semibold">0</span>
+                 <span className="absolute text-amazon_yellow text-xs top-2 left-[29px] font-semibold">
+                    {productData ? productData.length : 0}
+                 </span>
             </Link>
 
         </div>
