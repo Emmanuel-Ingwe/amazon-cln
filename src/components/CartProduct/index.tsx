@@ -30,7 +30,7 @@ const index = ({ item }: cartProductsProps) => {
 
     return (
     <div className="bg-gray-100 rounded-lg flex items-center gap-4">
-        <Image src={item.image} alt="productImage" />
+        <Image className="object-cover" width={150} height={150} src={item.image} alt="productImage" />
     </div>
   )
 }
