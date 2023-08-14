@@ -31,6 +31,13 @@ const index = ({ item }: cartProductsProps) => {
     return (
     <div className="bg-gray-100 rounded-lg flex items-center gap-4">
         <Image className="object-cover" width={150} height={150} src={item.image} alt="productImage" />
+        <div className="flex items-center px-2 gap-4">
+            <div className="div">
+                <p className="text-lg font-semibold text-amazon_blue">{item.title}</p>
+                <p className="text-sm text-gray-600">{item.description}</p>
+                <p>Unit Price <span><FormattedPrice /></span></p>
+            </div>
+        </div>
     </div>
   )
 }
