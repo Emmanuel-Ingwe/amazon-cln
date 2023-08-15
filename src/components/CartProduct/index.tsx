@@ -1,10 +1,35 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+// import FormattedPrice from "./FormattedPrice";
+import { LuMinus, LuPlus } from "react-icons/lu";
+import { IoMdClose } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import {
+  decreaseQuantity,
+  deleteProduct,
+  increaseQuantity,
+} from "@/store/nextSlice";
+interface Item {
+  brand: string;
+  category: string;
+  description: string;
+  image: string;
+  isNew: boolean;
+  oldPrice: number;
+  price: number;
+  title: string;
+  _id: number;
+  quantity: number;
+}
+interface cartProductsProps {
+  item: Item;
+}
 
-type Props = {}
+const index = ({ item }: cartProductsProps) => {
+    const dispatch = useDispatch();
 
-const index = (props: Props) => {
-  return (
-    <div>index</div>
+    return (
+    <div className="">index</div>
   )
 }
 
