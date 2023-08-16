@@ -21,7 +21,15 @@ const cart = (props: Props) => {
               <p className='text-2xl font-semibold text-amazon_blue'>Shopping cart</p>
               <p className="text-lg font-semibold text-amazon_blue">Subtitle</p>
             </div>
-            <div className=""></div>
+            <div className="">
+              {
+                productData.map((item: StoreProduct) => (
+                  <div className="py-2 flex flex-col gap-2">
+                    <p>{item.brand}</p>
+                  </div>
+                ))
+              }
+            </div>
           </div>
           </>
         ) : (
