@@ -1,7 +1,7 @@
 import React from 'react'
 import { StateProps, StoreProduct } from '../../../type';
 import { useSelector } from "react-redux";
-// import CartProduct from "@/components/CartProduct";
+import CartProduct from "@/components/CartProduct";
 // import ResetCart from "@/components/ResetCart";
 // import Link from "next/link";
 // import CartPayment from "@/components/CartPayment";
@@ -25,7 +25,7 @@ const cart = (props: Props) => {
               {
                 productData.map((item: StoreProduct) => (
                   <div key={item._id} className="py-2 flex flex-col gap-2">
-                    <p>{item.brand}</p>
+                    <CartProduct item={item} />
                   </div>
                 ))
               }
