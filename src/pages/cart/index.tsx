@@ -24,7 +24,7 @@ const cart = (props: Props) => {
             <div className="">
               {
                 productData.map((item: StoreProduct) => (
-                  <div className="py-2 flex flex-col gap-2">
+                  <div key={item._id} className="py-2 flex flex-col gap-2">
                     <p>{item.brand}</p>
                   </div>
                 ))
