@@ -12,6 +12,7 @@ export interface ProductProps{
 
 export interface StoreProduct {
     brand: string;
+    item: string;
     category:string;
     description:string;
     image:string;
