@@ -34,8 +34,8 @@ const cart = (props: Props) => {
           </div>
           </>
         ) : (
-          <div className="">
-            <h1 className="">Your cart is empty</h1>
+          <div className="bg-white h-64 col-span-5 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
+            <h1 className="text-lg font-medium">Your cart is empty</h1>
             <button>go to shopping</button>
           </div>
         )
