@@ -3,7 +3,7 @@ import { StateProps, StoreProduct } from '../../../type';
 import { useSelector } from "react-redux";
 import CartProduct from "@/components/CartProduct";
 import ResetCart from "@/components/ResetCart";
-// import Link from "next/link";
+import Link from "next/link";
 // import CartPayment from "@/components/CartPayment";
 
 type Props = {}
