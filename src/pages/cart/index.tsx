@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import CartProduct from "@/components/CartProduct";
 import ResetCart from "@/components/ResetCart";
 import Link from "next/link";
-// import CartPayment from "@/components/CartPayment";
+import CartPayment from "@/components/CartPayment";
 
 type Props = {}
 
