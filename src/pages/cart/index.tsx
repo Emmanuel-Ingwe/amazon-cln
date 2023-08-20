@@ -37,7 +37,7 @@ const cart = (props: Props) => {
           <div className="bg-white h-64 col-span-5 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
             <h1 className="text-lg font-medium">Your cart is empty</h1>
             <Link href={"/"}>
-            <button>go to shopping</button>
+            <button className='w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:text-black hover:bg-amazon_yellow '>go to shopping</button>
             </Link>
           </div>
         )
