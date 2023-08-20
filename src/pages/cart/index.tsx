@@ -32,6 +32,9 @@ const cart = (props: Props) => {
               <ResetCart />
             </div>
           </div>
+          <div className="bg-white h-64 col-span-1 rounded-lg flex items-center">
+            <CartPayment />
+          </div>
           </>
         ) : (
           <div className="bg-white h-64 col-span-5 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
