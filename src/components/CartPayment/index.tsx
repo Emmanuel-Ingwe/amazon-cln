@@ -23,7 +23,7 @@ const index = (props: Props) => {
       <p className="flex items-center justify-between px-2 font-semibold">
         Total:{" "}
         <span className="">
-          <FormattedPrice amount={0} />
+          <FormattedPrice amount={totalAmount} />
         </span>
       </p>
     </div>
