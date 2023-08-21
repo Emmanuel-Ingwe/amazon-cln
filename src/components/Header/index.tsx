@@ -9,7 +9,7 @@ import cartIcon from '../../images/cartIcon.png'
 import { useSelector, useDispatch } from "react-redux";
 import { StateProps, StoreProduct } from "../../../type";
 import { useSession, signIn, signOut } from "next-auth/react";
-// import { addUser } from "@/store/nextSlice";
+import { addUser } from "@/store/nextSlice";
 // import SearchProducts from "../SearchProducts";
 
 type Props = {}
@@ -17,6 +17,22 @@ type Props = {}
 const index = (props: Props) => {
     const { data: session } = useSession()
     const {productData, favouriteData} = useSelector((state: StateProps) => state.next)
+
+    const dispatch = useDispatch();
+//   useEffect(() => {
+//     setAllData(allProducts.allProducts);
+//   }, [allProducts]);
+  useEffect(() => {
+    if (session) {
+      dispatch(
+        addUser({
+          name: session?.user?.name,
+          email: session?.user?.email,
+          image: session?.user?.image,
+        })
+      );
+    }
+  }, [session]);
 
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
