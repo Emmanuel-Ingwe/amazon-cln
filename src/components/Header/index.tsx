@@ -62,7 +62,7 @@ const index = (props: Props) => {
 
             {
              userInfo? ( 
-             <div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+             <div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white hover:rounded-lg cursor-pointer duration-300 h-[86%]">
                     <img src={userInfo.image} alt="userImg" className='w-8 h-8 rounded-full object-cover' />
                 <div className="text-xs text-gray-100 flex flex-col justify-between">
                     <p className="text-white font-bold">{userInfo.name}</p>
