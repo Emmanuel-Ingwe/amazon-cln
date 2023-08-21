@@ -14,6 +14,12 @@ const index = (props: Props) => {
           Your order qualifies for FREE Shipping bt choosing this option at checkout. see datails....
         </p>
       </div>
+      <p className="flex items-center justify-between px-2 font-semibold">
+        Total:{" "}
+        <span className="">
+          <FormattedPrice amount=(0) />
+        </span>
+      </p>
     </div>
   )
 }
