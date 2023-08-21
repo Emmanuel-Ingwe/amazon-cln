@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SiMediamarkt } from "react-icons/si";
 import FormattedPrice from "../FormattedPrice"
-import StateProps from "../../../type"
+import StateProps, { StoreProduct } from "../../../type"
 import { useDispatch, useSelector } from 'react-redux';
 
 type Props = {}
@@ -9,6 +9,14 @@ type Props = {}
 const index = (props: Props) => {
   const { productData } = useSelector((state: StateProps) => state.next)
   const [ totalAmount, setTotalAmount ] = useState(0)
+  useEffect(() => {
+    let amt=0
+    productData.map((item: StoreProduct) => {
+      amt += item.price * item.quantity
+      return
+    })
+    setTotalAmount(amt)
+  }, [productData])
 
   return (
     <div className='flex flex-col gap-4'>
