@@ -1,5 +1,6 @@
 import React from 'react'
 import { SiMediamarkt } from "react-icons/si";
+import FormattedPrice from "../FormattedPrice"
 
 type Props = {}
 
@@ -17,7 +18,7 @@ const index = (props: Props) => {
       <p className="flex items-center justify-between px-2 font-semibold">
         Total:{" "}
         <span className="">
-          <FormattedPrice amount=(0) />
+          <FormattedPrice amount={0} />
         </span>
       </p>
     </div>
