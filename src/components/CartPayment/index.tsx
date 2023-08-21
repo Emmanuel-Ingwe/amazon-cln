@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { SiMediamarkt } from "react-icons/si";
 import FormattedPrice from "../FormattedPrice"
-import StateProps, { StoreProduct } from "../../../type"
+import {StateProps, StoreProduct } from "../../../type"
 import { useDispatch, useSelector } from 'react-redux';
 
 type Props = {}
 
 const index = (props: Props) => {
-  const { productData } = useSelector((state: StateProps) => state.next)
+    const {productData, favouriteData, userInfo} = useSelector((state: StateProps) => state.next)
   const [ totalAmount, setTotalAmount ] = useState(0)
   useEffect(() => {
     let amt=0
@@ -34,12 +34,22 @@ const index = (props: Props) => {
           <FormattedPrice amount={totalAmount} />
         </span>
       </p>
-      <div className="">
-        <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
-          Proceed to buy
-        </button>
-        <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">Please login to continue</p>
-      </div>
+        {
+          userInfo? (
+            <div className="">
+                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
+                  Proceed to buy
+                </button>
+                <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">Please login to continue</p>
+            </div>
+          ) : (
+            <div className="">
+                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
+                  Proceed to buy
+                </button>
+            </div>
+          )
+        }
     </div>
   )
 }
