@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import logo from '../../images/logo.png'
 import { BiCaretDown } from "react-icons/bi";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import cartIcon from '../../images/cartIcon.png'
 import { useSelector, useDispatch } from "react-redux";
 import { StateProps, StoreProduct } from "../../../type";
-// import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 // import { useEffect, useState } from "react";
 // import { addUser } from "@/store/nextSlice";
 // import SearchProducts from "../SearchProducts";
@@ -16,6 +16,7 @@ import { StateProps, StoreProduct } from "../../../type";
 type Props = {}
  
 const index = (props: Props) => {
+    const { data: session } = useSession()
     const {productData, favouriteData} = useSelector((state: StateProps) => state.next)
 
   return (
