@@ -60,14 +60,16 @@ const index = (props: Props) => {
                 </span>
             </div>
 
-            (
-                userInfo?<div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
-                <p className="text-white font-bold flex items-center">Hello, sign in</p>
-                <p className="">
-                    Account & Lists{" "}
-                    <span><BiCaretDown /></span>
-                </p>
+            {
+             userInfo? ( 
+             <div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+                    <img src={userInfo.image} alt="userImg" className='w-8 h-8 rounded-full object-cover' />
+                <div className="text-xs text-gray-100 flex flex-col justify-between">
+                    <p className="text-white font-bold">{userInfo.name}</p>
+                    <p className="">{userInfo.email}</p>
+                </div>
             </div>
+
             ) : (
                 <div
                         onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
@@ -76,8 +78,8 @@ const index = (props: Props) => {
                         Account & Lists{" "}
                         <span><BiCaretDown /></span>
                     </p>
-                </div>
-            )
+                </div> )
+            }
 
             <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
                 <p className="">Marked</p>
