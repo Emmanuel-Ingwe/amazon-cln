@@ -35,7 +35,7 @@ const index = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex-1 h-10 hidden md:inline-flex items-center justify-between relative">
+            <div  className="flex-1 h-10 hidden md:inline-flex items-center justify-between relative">
                 <input onChange={''}
                     value={''}
                     className="w-full h-full rounded-md px-2 placeholder:text-sm text-base text-black border-[3px] border-transparent outline-none focus-visible:border-amazon_yellow" />
@@ -45,7 +45,7 @@ const index = (props: Props) => {
                 </span>
             </div>
 
-            <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+            <div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
                 <p className="text-white font-bold flex items-center">Hello, sign in</p>
                 <p className="">
                     Account & Lists{" "}
