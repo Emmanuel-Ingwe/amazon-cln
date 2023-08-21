@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SiMediamarkt } from "react-icons/si";
 import FormattedPrice from "../FormattedPrice"
+import StateProps from "../../../type"
+import { useDispatch, useSelector } from 'react-redux';
 
 type Props = {}
 
 const index = (props: Props) => {
+  const { productData } = useSelector((state: StateProps) => state.next)
+  const [ totalAmount, setTotalAmount ] = useState(0)
+
   return (
     <div className='flex flex-col gap-4'>
       <div className="flex gap-2">
