@@ -37,7 +37,7 @@ const index = (props: Props) => {
         {
           userInfo? (
             <div className="">
-                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
+                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg">
                   Proceed to buy
                 </button>
                 <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">Please login to continue</p>
