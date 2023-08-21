@@ -16,7 +16,7 @@ type Props = {}
  
 const index = (props: Props) => {
     const { data: session } = useSession()
-    const {productData, favouriteData} = useSelector((state: StateProps) => state.next)
+    const {productData, favouriteData, userInfo} = useSelector((state: StateProps) => state.next)
 
     const dispatch = useDispatch();
 //   useEffect(() => {
@@ -60,13 +60,24 @@ const index = (props: Props) => {
                 </span>
             </div>
 
-            <div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+            (
+                userInfo?<div onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
                 <p className="text-white font-bold flex items-center">Hello, sign in</p>
                 <p className="">
                     Account & Lists{" "}
                     <span><BiCaretDown /></span>
                 </p>
             </div>
+            ) : (
+                <div
+                        onClick={() => signIn()} className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
+                    <p className="text-white font-bold flex items-center">Hello, sign in</p>
+                    <p className="">
+                        Account & Lists{" "}
+                        <span><BiCaretDown /></span>
+                    </p>
+                </div>
+            )
 
             <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%]">
                 <p className="">Marked</p>
