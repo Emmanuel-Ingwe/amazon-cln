@@ -45,7 +45,7 @@ const index = (props: Props) => {
           ) : (
             <div className="">
                 <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
-                  Proceed to buy
+                  Please login to continue
                 </button>
             </div>
           )
