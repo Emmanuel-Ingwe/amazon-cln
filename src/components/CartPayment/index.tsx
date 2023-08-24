@@ -37,16 +37,16 @@ const index = (props: Props) => {
         {
           userInfo? (
             <div className="">
-                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg">
+                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg hover:bg-amazon_yellow hover:text-black duration-300 mt-2">
                   Proceed to buy
                 </button>
-                <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">Please login to continue</p>
             </div>
           ) : (
             <div className="">
                 <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
-                  Please login to continue
+                  Proceed to buy
                 </button>
+                    <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">Please login to continue</p>
             </div>
           )
         }
