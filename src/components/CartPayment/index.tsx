@@ -18,6 +18,13 @@ const index = (props: Props) => {
     setTotalAmount(amt)
   }, [productData])
 
+  //stripe
+  const handleCheckout = async () => {
+    // const stripe = await stripePromise;
+  }
+
+
+
   return (
     <div className='flex flex-col gap-4'>
       <div className="flex gap-2">
