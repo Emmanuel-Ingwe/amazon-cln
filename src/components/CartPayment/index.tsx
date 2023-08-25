@@ -3,6 +3,7 @@ import { SiMediamarkt } from "react-icons/si";
 import FormattedPrice from "../FormattedPrice"
 import {StateProps, StoreProduct } from "../../../type"
 import { useDispatch, useSelector } from 'react-redux';
+import { loadStripe } from '@stripe/stripe-js';
 
 type Props = {}
 
