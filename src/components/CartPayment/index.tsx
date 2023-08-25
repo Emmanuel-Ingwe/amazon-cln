@@ -25,7 +25,7 @@ const index = (props: Props) => {
           <SiMediamarkt />
         </span>
         <p className="text-sm">
-          Your order qualifies for FREE Shipping bt choosing this option at checkout. see datails....
+          Your order qualifies for FREE Shipping but choosing this option at checkout. see datails....
         </p>
       </div>
       <p className="flex items-center justify-between px-2 font-semibold">
