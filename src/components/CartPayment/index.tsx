@@ -37,7 +37,7 @@ const index = (props: Props) => {
         {
           userInfo? (
             <div className="">
-                <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg hover:bg-amazon_yellow hover:text-black duration-300 mt-2">
+                <button onClick={handleCheckout} className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg hover:bg-amazon_yellow hover:text-black duration-300 mt-2">
                   Proceed to buy
                 </button>
             </div>
