@@ -4,6 +4,7 @@ import FormattedPrice from "../FormattedPrice"
 import {StateProps, StoreProduct } from "../../../type"
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
+import { useSession } from "next-auth/react";
 
 type Props = {}
 
