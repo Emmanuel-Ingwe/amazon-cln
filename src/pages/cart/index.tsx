@@ -17,7 +17,7 @@ const cart = (props: Props) => {
         productData.length > 0 ?(
           <>
           <div className='bg-white col-span-4 p-4 rounded-lg'>
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1'>
+            <div className='flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1'>  
               <p className='text-2xl font-semibold text-amazon_blue'>Shopping cart</p>
               <p className="text-lg font-semibold text-amazon_blue">Subtitle</p>
             </div>
