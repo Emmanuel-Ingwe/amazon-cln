@@ -20,6 +20,10 @@ const index = (props: Props) => {
   }, [productData])
 
   //stripe
+  const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
+  );
+
   const handleCheckout = async () => {
     // const stripe = await stripePromise;
   }
