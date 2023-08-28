@@ -24,9 +24,19 @@ export default function Home({ productData }: Props) {
   )
 }
 
-
 export const getServerSideProps = async () => {
-  const res = await fetch("https://fakestoreapiserver.reactbd.com/tech")
-  const productData = await res.json()
-  return { props: { productData } }
-}
+  try {
+    const res = await fetch("https://fakestoreapiserver.reactbd.com/tech");
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.status}`);
+    }
+
+    const productData = await res.json();
+
+    return { props: { productData } };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return { props: { productData: [] } }; // Handle the error gracefully
+  }
+};
